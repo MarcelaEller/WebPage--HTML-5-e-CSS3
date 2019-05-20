@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"749a354bff","applicationID":"594758","transactionName":"dF4IEkBdWA4BQUwGVkJDFQNBHUcKC0Q=","queueTime":0,"applicationTime":619,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>基礎から学びたい人のためのCSS講座  [Skillhub (スキルハブ)]</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-c93c689aface2d4bde21d460b161c7ba.ico" />
+	
+	<meta name="description" content="HTMLを装飾するためにはCSSという言語を学びます。CSSも非常に単純なのでその気になれば1日でマスターすることができます。">
+	<meta property="og:image" content="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/057/medium/CSS3.jpg?1399012133" />
+	
+  <link rel="stylesheet" media="screen" href="/assets/application-51bdfce7c9ad651cc3fa83b1ba3b8932.css" />	
+  <script src="/assets/application-27f532aab0fb91997ad0e131b84903c2.js"></script>
+	
+	<link href="/stylesheets/prettify.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/javascripts/prettify.js"></script>
+	
+	<script type="text/javascript">
+	    // This function is executed when the page has finished loading.
+	    jQuery(function($) {
+	        // This function highlights (by default) pre and code tags which are annotated correctly.
+	        $.syntax();
+	    });
+	</script>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript">
+	  var _kmq = _kmq || [];
+	  var _kmk = _kmk || 'b877ac81fd6928a164aa92ab7563c80a8851fce1';
+	  function _kms(u){
+	    setTimeout(function(){
+	      var d = document, f = d.getElementsByTagName('script')[0],
+	      s = d.createElement('script');
+	      s.type = 'text/javascript'; s.async = true; s.src = u;
+	      f.parentNode.insertBefore(s, f);
+	    }, 1);
+	  }
+	  _kms('//i.kissmetrics.com/i.js');
+	  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+	</script>
+	<script type="text/javascript">
+	  _kmq.push(['record', 'Conversion']);
+	</script>
+		
+	<!-- Facebook Conversion Code for EventTracker -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6021984593004', {'value':'0.00','currency':'JPY'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021984593004&amp;cd[value]=0.00&amp;cd[currency]=JPY&amp;noscript=1" /></noscript>
+
+	
+	
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kyxaHWdiJBdAoM+FrhqcPn345HJbtul74OvBun2qTS+CcM/BEaK6nssAa8PfeIotlZDj9gyJzJcFevdaDIBJEA==" />
+	
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$(".comment").click(function(){
+				var comment_id = $(this).attr("comment_id")
+				$("#comment-form_"+comment_id+"").show();
+				$(".comment-form").val("");
+			});
+			
+		})
+	</script>
+	
+	
+
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+	<link type="text/css"
+	    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+	
+	
+	
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-34848572-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+	
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 979348047;
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+	<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/979348047/?value=0&amp;guid=ON&amp;script=0"/>
+		</div>
+	</noscript>
+	
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1694029527521000');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1694029527521000&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+	
+
+	<link rel="alternate" type="application/atom+xml" title="ATOM" href="http://skillhub.jp/schools/4/feed" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://skillhub.jp/schools/4/feed.rss" />
+	
+
+	
+	<link rel="apple-touch-icon" href="/assets/skillhub_icon.png"/>
+
+	
+	
+</head>
+<body onload="prettyPrint()" id="default-layout">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=365911210128005";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+<div class="topbar">
+  <div class="fill">
+    <div class="container fixed">
+			  <h3><a href="/"><img alt="SKILLHUB" src="/assets/logo2-c37dfe08db9efd8a338336c5acc3ab3e.png" /></a></h3>
+      
+      <ul>
+				<li class="active"><a href="/courses">講座一覧</a></li>
+				
+				
+				
+				
+				<li class=""><a href="/blogs">ブログ</a></li>
+				<li class=""><strong><a href="/premium_services">プレミアムサービス</a></strong></li>
+				<li class=""><a href="/events">講習会</a></li>
+				<li><a href="/messages/new?to_user=2&c=ask">お問い合わせ</a></li>
+				
+				
+				
+				
+      </ul>
+		
+			<ul class="nav secondary-nav">
+				<li><a href="/users/sign_in">ログイン</a></li>
+       </ul>
+		  
+		
+		
+    </div>
+  </div>
+</div>
+  <div class="container second">
+		
+		
+		
+
+		<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$("a.youtube").YouTubePopup({ autoplay: 1, width: 800, height: 500 });
+	})
+	
+</script>
+
+	<!-- <div class="context-display">
+	<div class="float-left" style="margin-right: 10px">
+		<img height="40" src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/schools/images/000/000/004/thumb/uguiss_school.jpg?1333974151" alt="Uguiss school" />
+	</div>
+	<div class="float-left">
+		<strong><a class="underline" href="/schools/4">UGUISS Webスクール [Web制作専門スクール]</a>	</strong>
+		<p class="small">の提供でこの講座をお届けします。<a class="underline" href="/courses?school_id=4">» 講座一覧に戻る</a></p>
+	</div>
+
+
+</div> -->
+
+
+<div class="hero-unit">
+	<div class="row">
+		<div class="span8">
+			<h1>基礎から学びたい人のためのCSS講座</h1>
+						<a class="btn primary large" href="/courses/57/enrollments/new">すぐに受講して学習を始める（無料）</a>
+			  
+				
+
+
+			
+				<p style="color: white; font-size:100%">≫ 現在9524人が受講中 ≪</p>
+			
+		</div>
+		<div class="span6 last">
+			<div class="course-ad-video">
+				<img width="334" src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/057/medium/CSS3.jpg?1399012133" alt="Css3" />
+				
+				
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- <ul class="tabs">
+	<li class="active"><a href="/courses/57">ホーム</a></li>
+	<li class="[&quot;questions&quot;]"><a href="/courses/57/questions?c=question">質問</a></li>
+	<li class="" ><a href="/courses/57/events">イベント</a></li>
+	<li class="[&quot;posts&quot;]"><a href="/courses/57/posts">ノート</a></li>
+	<li class="[&quot;course_managers&quot;]"><a href="/courses/57/course_managers">講師/スタッフ</a></li>
+
+	<div class="float-right"><a class="btn" href="/courses/57/questions/new">質問を作成する</a></div>	
+
+</ul> -->
+
+<div class="row line-wide post">
+	<div class="span12" id="course-content">
+
+		<p>HTMLを装飾するためにはCSSという言語を学びます。CSSも非常に単純なのでその気になれば1日でマスターすることができます。</p>	
+		
+		<div id="course">
+			<div id="lesson">
+				
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/432/thumb/CSS3.jpg?1399006375" alt="Css3" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">1</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSとは？</span>
+					<span class="gray small">(08:09)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>CSSっていったい何なの？と思っている初学者のためのレッスンになります。
+まずはCSSの概念について理解しましょう</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/433/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_14.03.10.png?1399007115" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 14.03.10" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">2</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSを実際に書いてみましょう〜 初期設定</span>
+					<span class="gray small">(08:09)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>HTMLからCSSを読み込むための初期設定を行います。
+HTML講座でサンプルサイトを作成できますので、そこに書き込んでいきます
+</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/434/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_14.10.02.png?1399007542" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 14.10.02" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">3</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSを実際に書いてみましょう～色々なスタイル</span>
+					<span class="gray small">(08:09)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>CSSはHTMLと連携しています。
+その設定をを変えると、HTMLがどのように変わっていくかを見てきます。</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/435/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_14.13.54.png?1399008199" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 14.13.54" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">4</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSでレイアウトを四角を並べる練習〜準備</span>
+					<span class="gray small">(09:36)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>CSSでレイアウトを四角を並べる実践練習をやります。
+そのための準備をまず行います</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/436/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_14.27.48.png?1399008537" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 14.27.48" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">5</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSでレイアウトを四角を並べる練習〜DIVタグ</span>
+					<span class="gray small">(09:36)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>実際のコードを見ながらCSSでレイアウトを四角を並べる練習をやります。
+DIVタグの使い方を習得します</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/437/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_15.11.21.png?1399011100" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 15.11.21" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">6</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSでレイアウトを四角を並べる練習〜IDの活用</span>
+					<span class="gray small">(12:23)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>実際にサイトを作る時に便利な CSS の ID の活用方法を習得します。</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/438/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_15.16.24.png?1399011416" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 15.16.24" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">7</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSでレイアウトを四角を並べる練習〜Floatの活用</span>
+					<span class="gray small">(12:23)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>Floatを使うと、グッとWebページっぽくなってきます。
+活用の仕方を是非習得してください</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+<div class="row  lesson list">
+
+	<div class="span2">
+		<div class="img-box shadow">
+			<img width="100" src="//s3-ap-northeast-1.amazonaws.com/skillhub-images/images/439/thumb/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2014-05-02_15.21.22.png?1399011701" alt="%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88 2014 05 02 15.21.22" />
+		</div>
+	</div>
+
+	<div class="span8 ">
+	
+
+	  <h2>
+			<div class="row">
+				<div class="float-left">
+					<span class="feature-num-s">8</span>		
+				</div>
+				<div class="float-title">
+					<span class="gray">CSSでレイアウトを四角を並べる練習〜Wrapperの活用</span>
+					<span class="gray small">(12:23)</span>
+				</div>
+			</div>
+	
+		</h2>
+
+		<p>Wrapperを活用することで段落ちを解消する方法を習得します</p>
+		
+	
+		<div class="section-footer align-right">
+
+			
+		</div>
+	
+	</div>
+</div><!-- lessons -->
+
+			</div>
+		</div>
+		
+
+
+	</div>
+
+
+	<div class="span6 last" id="user-side-right">
+		<div class="inner">
+				<div class="category section-side">
+		<h2>受講生 9524</h2>
+
+		<div class="enrollments">
+				<div class="face-thumbnail">
+
+					<a title="Toshiaki  Morita" href="/users/16232"><img width="40" src="http://graph.facebook.com/v2.6/998063773685510/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Minoru Kaneko" href="/users/16231"><img width="40" src="http://graph.facebook.com/v2.6/895863440598441/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Marina Shimizu" href="/users/16229"><img width="40" src="http://graph.facebook.com/v2.6/1006347802851923/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Yamato Miura" href="/users/16228"><img width="40" src="http://graph.facebook.com/v2.6/1274604546006953/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Yasuyuki  Watanabe" href="/users/16223"><img width="40" src="http://graph.facebook.com/v2.6/1508173309309473/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Toru Kikuchi" href="/users/16218"><img width="40" src="http://graph.facebook.com/v2.6/2187455028139933/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="松岡敏孝" href="/users/16203"><img width="40" src="http://graph.facebook.com/v2.6/1571214042977436/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Naomichi Takahashi" href="/users/16202"><img width="40" src="http://graph.facebook.com/v2.6/1823575294603779/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Arata Minomo" href="/users/16195"><img width="40" src="http://graph.facebook.com/v2.6/1746205388789660/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Genki Matsuyama" href="/users/16193"><img width="40" src="http://graph.facebook.com/v2.6/1648705921877871/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Kouheimoriyama Moriyama" href="/users/16190"><img width="40" src="http://graph.facebook.com/v2.6/1407490286063865/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="小野葵" href="/users/16189"><img width="40" src="http://graph.facebook.com/v2.6/2077333249201133/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Miyuki Osumi" href="/users/16188"><img width="40" src="http://graph.facebook.com/v2.6/1878211938858613/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+				<div class="face-thumbnail">
+
+					<a title="Yukiyo  Kizuka" href="/users/16184"><img width="40" src="http://graph.facebook.com/v2.6/1590438741069011/picture?width=40" alt="Picture?width=40" /></a>
+				</div>
+		</div>
+	</div>
+
+			<div class="section-side" id="top-five">
+				<h2>人気講座TOP5</h2>
+						<li>
+		<h3>
+			<div class="row">
+				<div class="span1">
+					<div class="feature-num">1</div>	
+				</div>
+				
+				<div class="span4 last float-left title">
+						<a href="/courses/57">基礎から学びたい人のためのCSS講座</a>
+					<span class="share-count" style="font-size:10px">9524生徒</span>	
+				</div>	
+			</div>
+			
+		</h3>
+		<div class="row">
+			<div class="span2">
+				<img src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/057/thumb/CSS3.jpg?1399012133" alt="Css3" />
+			</div>
+			<div class="span3 desc last">
+				HTMLを装飾するためにはCSSという言語を学びます。CSSも非常に単純なのでその気になれば1...
+			</div>
+		</div>
+		
+	</li>
+	<li>
+		<h3>
+			<div class="row">
+				<div class="span1">
+					<div class="feature-num">2</div>	
+				</div>
+				
+				<div class="span4 last float-left title">
+						<a href="/courses/38">基礎から学びたい人のためのHTML講座</a>
+					<span class="share-count" style="font-size:10px">9439生徒</span>	
+				</div>	
+			</div>
+			
+		</h3>
+		<div class="row">
+			<div class="span2">
+				<img src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/038/thumb/html_kouza.jpg?1385004039" alt="Html kouza" />
+			</div>
+			<div class="span3 desc last">
+				学びたいけれどもHTMLって難しそうなんて思っている人のための講座です。HTMLはすごく簡単で...
+			</div>
+		</div>
+		
+	</li>
+	<li>
+		<h3>
+			<div class="row">
+				<div class="span1">
+					<div class="feature-num">3</div>	
+				</div>
+				
+				<div class="span4 last float-left title">
+						<a href="/courses/61">Webサイト制作実践講座（前編）</a>
+					<span class="share-count" style="font-size:10px">9316生徒</span>	
+				</div>	
+			</div>
+			
+		</h3>
+		<div class="row">
+			<div class="span2">
+				<img src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/061/thumb/webkoutiku1.png?1416619224" alt="Webkoutiku1" />
+			</div>
+			<div class="span3 desc last">
+				イラストレーターの画像を起こして、CSS/HTMLでコーディングしていく作業の
+全体を習得し...
+			</div>
+		</div>
+		
+	</li>
+	<li>
+		<h3>
+			<div class="row">
+				<div class="span1">
+					<div class="feature-num">4</div>	
+				</div>
+				
+				<div class="span4 last float-left title">
+						<a href="/courses/12">WebデザインのためのIllustrator入門講座</a>
+					<span class="share-count" style="font-size:10px">9265生徒</span>	
+				</div>	
+			</div>
+			
+		</h3>
+		<div class="row">
+			<div class="span2">
+				<img src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/012/thumb/photoshop_kouza.jpg?1385037569" alt="Photoshop kouza" />
+			</div>
+			<div class="span3 desc last">
+				Webデザインに必要なIllustratorの機能を覚えながら、Webページ作りに必要な理論を...
+			</div>
+		</div>
+		
+	</li>
+	<li>
+		<h3>
+			<div class="row">
+				<div class="span1">
+					<div class="feature-num">5</div>	
+				</div>
+				
+				<div class="span4 last float-left title">
+						<a href="/courses/49">Webサイト公開講座（サーバーにアップして公開しよう！）</a>
+					<span class="share-count" style="font-size:10px">8834生徒</span>	
+				</div>	
+			</div>
+			
+		</h3>
+		<div class="row">
+			<div class="span2">
+				<img src="//skillhub-images.s3-ap-northeast-1.amazonaws.com/courses/images/000/000/049/thumb/deploy.jpeg?1384841118" alt="Deploy" />
+			</div>
+			<div class="span3 desc last">
+				WebサーバーのデファクトスタンダードであるApacheに関する事やドメインに関する事などを学...
+			</div>
+		</div>
+		
+	</li>
+
+				</ul>
+			</div>
+			
+			
+		
+		
+		
+			<div class="section-side">
+
+					
+			
+			
+			</div>	
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+		
+  </div> <!-- /container -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span10">
+					<h2>Skillhubの購読にはFacebookが便利です</h2>
+					
+					<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FSkillhub%2F403132223038591&amp;width=580&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=359522504058005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:580px; height:258px;" allowTransparency="true"></iframe>
+					
+				</div>
+				
+				
+				
+				
+				<div class="span6 last">
+
+
+					<h3>チームUGUISS [ウグイス]</h3>
+					<div class="row">
+						<div class="span2">
+							<img width="100" src="http://www.ehills.co.jp/rp/dfw/EHILLS/hills/photonews/img/456.jpg" alt="456" />
+						</div>
+						<div class="span4">
+							site: <a href="http://uguiss.com">http://uguiss.com</a><br>
+							mail: <a href="mailto:webmaster@uguiss.com">webmaster@uguiss.com</a><br>
+							<a href="http://uguiss.com/inquiries/new">■コンタクト</a><br>
+							<a href="/companies">■特定商取引に関する表示</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+	    <div id="footer-bottom" class="align-right">
+				&copy; UGUISS 2018
+			</div>	
+		</div>
+		
+		
+  </div>
+
+
+</body>
+</html>
+
+
